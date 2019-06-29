@@ -42,18 +42,10 @@ if not os.path.exists(bfile):
     # Make difference map ...
     diff = numpy.zeros((lat.size, lon.size), dtype = numpy.float64)             # [hr]
 
-    # Initialize observer ...
+    # Define the reference time as chronological noon on 20-March-2019 and
+    # initialize observer ...
+    ref = datetime.datetime(2019, 3, 20, 12, tzinfo = pytz.timezone("UTC"))
     obs = ephem.Observer()
-
-    # Find the next time (after 6AM on 20-March-2019) that the Sun will cross
-    # the meridian for an observer at (0.0, 0.0, 0.0) ...
-    obs.date = ephem.Date(datetime.datetime(2019, 3, 20, 6, tzinfo = pytz.timezone("UTC")))
-    obs.lat = 0.0                                                               # [rad]
-    obs.long = 0.0                                                              # [rad]
-    obs.elevation = 0.0                                                         # [m]
-    ref = pytz.timezone("UTC").localize(obs.next_transit(ephem.Sun()).datetime())
-
-    # Update the observer's time ...
     obs.date = ephem.Date(ref)
 
     # Loop over x-axis ...
@@ -65,16 +57,10 @@ if not os.path.exists(bfile):
             obs.long = lon[ix]                                                  # [rad]
             obs.elevation = elev[iy, ix]                                        # [m]
 
-            # If the location is West of the meridian then find the next time
-            # that the Sun will cross the meridian; if the location is East of
-            # the meridian then find the previous time that the Sun crossed the
-            # meridian ...
-            if lon[ix] < 0.0:
-                noon = pytz.timezone("UTC").localize(obs.next_transit(ephem.Sun()).datetime())
-            else:
-                noon = pytz.timezone("UTC").localize(obs.previous_transit(ephem.Sun()).datetime())
+            # Find the next time that the Sun will cross the meridian ...
+            noon = pytz.timezone("UTC").localize(obs.next_transit(ephem.Sun()).datetime())
 
-            # Find out the difference from (0.0, 0.0, 0.0) ...
+            # Find out the difference from the reference time ...
             diff[iy, ix] = (noon - ref).total_seconds() / 3600.0                # [hr]
 
     # Save difference map ...
@@ -91,7 +77,7 @@ if not os.path.exists(pfile):
     print("Making \"{:s}\" ...".format(pfile))
 
     # Create short-hand ...
-    cm = matplotlib.pyplot.get_cmap("seismic")
+    cm = matplotlib.pyplot.get_cmap("jet")
 
     # Make image ...
     img = numpy.zeros((lat.size, lon.size, 3), dtype = numpy.uint8)
@@ -101,7 +87,7 @@ if not os.path.exists(pfile):
         # Loop over x-axis ...
         for ix in range(lon.size):
             # Find normalized value ...
-            val = min(1.0, max(0.0, 0.5 + diff[iy, ix] / 24.0))
+            val = min(1.0, max(0.0, diff[iy, ix] / 24.0))
 
             # Determine colours ...
             r, g, b, a = cm(val)
