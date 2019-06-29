@@ -2,6 +2,7 @@
 
 # Import modules ...
 import datetime
+import math
 import matplotlib
 matplotlib.use("Agg")                                                           # NOTE: http://matplotlib.org/faq/howto_faq.html#matplotlib-in-a-web-application-server
 import matplotlib.pyplot
@@ -24,6 +25,14 @@ try:
     import pyguymer3
 except:
     raise Exception("you need to have the Python module from https://github.com/Guymer/PyGuymer3 located somewhere in your $PYTHONPATH")
+
+# ******************************************************************************
+
+# Define functions ...
+def horizon(e):
+    # Calculate the angle below horizontal down to the horizon due to the
+    # observer being above the radius of the Earth ...
+    return -math.acos(ephem.earth_radius / (e + ephem.earth_radius))            # [rad]
 
 # ******************************************************************************
 
@@ -56,6 +65,7 @@ if not os.path.exists(bfile):
             obs.lat = lat[iy]                                                   # [rad]
             obs.long = lon[ix]                                                  # [rad]
             obs.elevation = elev[iy, ix]                                        # [m]
+            obs.horizon = horizon(elev[iy, ix])                                 # [rad]
 
             # Find the next time that the Sun will cross the meridian ...
             noon = pytz.timezone("UTC").localize(obs.next_transit(ephem.Sun()).datetime())
