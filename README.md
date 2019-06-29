@@ -16,7 +16,7 @@
 
 ### Step 3: Time Zones
 
-(to do)
+![Time Zone Map](timeZone.png)
 
 ### Step 4: Difference Between Noon And Time Zones
 
