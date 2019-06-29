@@ -1,3 +1,7 @@
+# Hide data files ...
+*.bin
+*.zip
+
 # Hide compiled code ...
 *.pyc
 
