@@ -2,13 +2,25 @@
 
 ## Maps
 
+### Step 1: Elevation
+
 ![Elevation Map](elev.png)
+
+### Step 2: Sunrise/Noon/Sunset
 
 ![Sunrise Difference Map](sunriseDiff.png)
 
 ![Noon Difference Map](noonDiff.png)
 
 ![Sunset Difference Map](sunsetDiff.png)
+
+### Step 3: Time Zones
+
+(to do)
+
+### Step 4: Difference Between Noon And Time Zones
+
+(to do)
 
 ## Comments
 
