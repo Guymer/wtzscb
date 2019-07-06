@@ -29,8 +29,8 @@ except:
 # ******************************************************************************
 
 # Load axes ...
-lon = numpy.fromfile("lon.bin", dtype = numpy.float64)                          # [m]
-lat = numpy.fromfile("lat.bin", dtype = numpy.float64)                          # [m]
+lon = numpy.fromfile("lon.bin", dtype = numpy.float64)                          # [rad]
+lat = numpy.fromfile("lat.bin", dtype = numpy.float64)                          # [rad]
 
 # ******************************************************************************
 

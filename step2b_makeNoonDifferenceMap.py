@@ -37,8 +37,8 @@ def horizon(e):
 # ******************************************************************************
 
 # Load elevation map along with axes ...
-lon = numpy.fromfile("lon.bin", dtype = numpy.float64)                          # [m]
-lat = numpy.fromfile("lat.bin", dtype = numpy.float64)                          # [m]
+lon = numpy.fromfile("lon.bin", dtype = numpy.float64)                          # [rad]
+lat = numpy.fromfile("lat.bin", dtype = numpy.float64)                          # [rad]
 elev = numpy.fromfile("elev.bin", dtype = numpy.float64).reshape(lat.size, lon.size)    # [m]
 
 # ******************************************************************************
