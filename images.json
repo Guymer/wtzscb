@@ -1,0 +1,33 @@
+{
+    "step1a": {
+        "step1a": "elev.png",
+        "__comment__": "An elevation map",
+        "__projection__": "PlateCarree",
+        "__source__": "https://github.com/Guymer/wtzscb"
+    },
+    "step2a": {
+        "step2a": "sunriseDiff.png",
+        "__comment__": "A sunrise time map",
+        "__projection__": "PlateCarree",
+        "__source__": "https://github.com/Guymer/wtzscb"
+    },
+    "step2b": {
+        "step2b": "noonDiff.png",
+        "__comment__": "A noon time map",
+        "__projection__": "PlateCarree",
+        "__source__": "https://github.com/Guymer/wtzscb"
+    },
+    "step2c": {
+        "step2c": "sunsetDiff.png",
+        "__comment__": "A sunset time map",
+        "__projection__": "PlateCarree",
+        "__source__": "https://github.com/Guymer/wtzscb"
+    },
+    "step3a": {
+        "step3a": "timeZone.png",
+        "__comment__": "A time zone map",
+        "__projection__": "PlateCarree",
+        "__source__": "https://github.com/Guymer/wtzscb"
+    },
+    "__comment__": "JSON file specifying the image to use for a given step. Read in by cartopy.mpl.geoaxes.read_user_background_images."
+}
