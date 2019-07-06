@@ -1,5 +1,7 @@
 # What Time Zone Should Countries Be?
 
+This module contains a few Python scripts to answer the question: "What Time Zone Should Countries Be?"
+
 ## Maps
 
 ### Step 1: Elevation
