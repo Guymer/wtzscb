@@ -20,7 +20,7 @@
 
 ### Step 4: Difference Between Noon And Time Zones
 
-(to do)
+![Time Zone Difference Map](timeZoneDiff.png)
 
 ## Comments
 
