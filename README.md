@@ -24,7 +24,7 @@
 
 ## Comments
 
-Note how the poles' sunrise and sunset are affected by the Earth being tilted (either total darkness or total light) but that solar noon isn't . Also note how the elevation of the ground affects sunrise and sunset but not solar noon.
+Note how the poles' sunrise and sunset are affected by the Earth being tilted (either total darkness or total light) but that solar noon isn't. Also note how the elevation of the ground affects sunrise and sunset but not solar noon.
 
 ## External Packages
 
