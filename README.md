@@ -1,6 +1,6 @@
 # What Time Zone Should Countries Be?
 
-This module contains a few Python scripts to answer the question: "What Time Zone Should Countries Be?"
+This repository contains a few Python scripts to answer the question: "What Time Zone Should Countries Be?"
 
 ## Maps
 
@@ -28,6 +28,19 @@ This module contains a few Python scripts to answer the question: "What Time Zon
 
 Note how the poles' sunrise and sunset are affected by the Earth being tilted (either total darkness or total light) but that solar noon isn't. Also note how the elevation of the ground affects sunrise and sunset but not solar noon.
 
+## Dependencies
+
+"wtzscb" requires the following Python modules to be installed and available in your `PYTHONPATH`.
+
+* [cartopy](https://pypi.org/project/Cartopy)
+* [ephem](https://pypi.org/project/ephem/)
+* [matplotlib](https://pypi.org/project/matplotlib)
+* [numpy](https://pypi.org/project/numpy)
+* [pyguymer3](https://github.com/Guymer/PyGuymer3)
+* [pytz](https://pypi.org/project/pytz)
+* [requests](https://pypi.org/project/requests)
+* [shapely](https://pypi.org/project/shapely)
+
 ## External Packages
 
-This module makes heavy use of [PyEphem](https://github.com/brandon-rhodes/pyephem) - you should checkout [the quick reference](https://rhodesmill.org/pyephem/quick.html).
+This repository makes heavy use of functions from [PyEphem](https://github.com/brandon-rhodes/pyephem) - you should checkout [the quick reference](https://rhodesmill.org/pyephem/quick.html) to see the things that it can do. Data is provided by [Natural Earth](http://www.naturalearthdata.com/) and [GLOBE](https://www.ngdc.noaa.gov/mgg/topo/globe.html). Whilst this repository doesn't use it directly, [the CIA World Factbook](https://www.cia.gov/library/publications/resources/the-world-factbook/) has [a nice PDF map of the world time zones](https://www.cia.gov/library/publications/the-world-factbook/graphics/ref_maps/physical/pdf/standard_time_zones_of_the_world.pdf) to compare against.
