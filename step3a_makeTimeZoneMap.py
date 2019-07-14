@@ -78,7 +78,7 @@ if not os.path.exists(bfile):
     # Save time zone map ...
     tmzn.tofile(bfile)
 else:
-    # Load time zone map
+    # Load time zone map ...
     tmzn = numpy.fromfile(bfile, dtype = numpy.float64).reshape(lat.size, lon.size) # [hr]
 
 # ******************************************************************************

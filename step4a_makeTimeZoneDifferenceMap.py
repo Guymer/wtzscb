@@ -48,7 +48,7 @@ if not os.path.exists(bfile):
     # Save time zone difference map ...
     offs.tofile(bfile)
 else:
-    # Load time zone difference map
+    # Load time zone difference map ...
     offs = numpy.fromfile(bfile, dtype = numpy.float64).reshape(lat.size, lon.size) # [hr]
 
 # ******************************************************************************
