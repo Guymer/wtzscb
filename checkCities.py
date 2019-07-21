@@ -27,6 +27,12 @@ cities = {
 
 # ******************************************************************************
 
+# Define function ...
+def flt2hhmm(flt):
+    hh = int(math.floor(flt))                                                   # [hr]
+    mm = int(round(60.0 * (flt % 1.0)))                                         # [min]
+    return hh, mm
+
 # Load axes and arrays ...
 lon = numpy.fromfile("lon.bin", dtype = numpy.float64)                          # [rad]
 lat = numpy.fromfile("lat.bin", dtype = numpy.float64)                          # [rad]
@@ -59,8 +65,11 @@ for record in cartopy.io.shapereader.Reader(shape_file).records():
     iy = abs(lat - y).argmin()
 
     # Guess the correct time zone ...
-    guess = 24.0 - diff[iy, ix]                                                 # [hr]
-    guess_hr = int(math.floor(guess))                                           # [hr]
-    guess_mn = int(round(60.0 * (guess % 1.0)))                                 # [min]
+    gues = 24.0 - diff[iy, ix]                                                  # [hr]
 
-    print("{:3s} {:7s} {:02d}:{:02d} {:4.1f}".format(record.attributes["ADM0_A3"], record.attributes["name_en"], guess_hr, guess_mn, tmzn[iy, ix]))
+    # Create pretty version ...
+    tmzn_hr, tmzn_mn = flt2hhmm(tmzn[iy, ix])                                   # [hr], [min]
+    diff_hr, diff_mn = flt2hhmm(diff[iy, ix])                                   # [hr], [min]
+    gues_hr, gues_mn = flt2hhmm(gues)                                           # [hr], [min]
+
+    print("{:7s} ({:3s}) should be {:02d}:{:02d} but it is actually {:02d}:{:02d} because noon occurs {:02d}:{:02d} after 0°".format(record.attributes["name_en"], record.attributes["ADM0_A3"], gues_hr, gues_mn, tmzn_hr, tmzn_mn, diff_hr, diff_mn))
