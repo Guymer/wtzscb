@@ -31,7 +31,7 @@ cities = {
 def flt2hhmm(flt):
     hh = int(math.floor(flt))                                                   # [hr]
     mm = int(round(60.0 * (flt % 1.0)))                                         # [min]
-    return hh, mm
+    return "{:02d}:{:02d}".format(hh, mm)
 
 # Load axes and arrays ...
 lon = numpy.fromfile("lon.bin", dtype = numpy.float64)                          # [rad]
@@ -67,9 +67,4 @@ for record in cartopy.io.shapereader.Reader(shape_file).records():
     # Guess the correct time zone ...
     gues = 24.0 - diff[iy, ix]                                                  # [hr]
 
-    # Create pretty version ...
-    tmzn_hr, tmzn_mn = flt2hhmm(tmzn[iy, ix])                                   # [hr], [min]
-    diff_hr, diff_mn = flt2hhmm(diff[iy, ix])                                   # [hr], [min]
-    gues_hr, gues_mn = flt2hhmm(gues)                                           # [hr], [min]
-
-    print("{:7s} ({:3s}) should be {:02d}:{:02d} but it is actually {:02d}:{:02d} because noon occurs {:02d}:{:02d} after 0°".format(record.attributes["name_en"], record.attributes["ADM0_A3"], gues_hr, gues_mn, tmzn_hr, tmzn_mn, diff_hr, diff_mn))
+    print("{:7s} ({:3s}) is at {:6.1f}° and should be {:5s} but it is actually {:5s} because noon occurs {:5s} after 0°".format(record.attributes["name_en"], record.attributes["ADM0_A3"], math.degrees(x), flt2hhmm(gues), flt2hhmm(tmzn[iy, ix]), flt2hhmm(diff[iy, ix])))
