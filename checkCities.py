@@ -17,11 +17,12 @@ cities = {
     "Beijing" : "CHN",
     "Berlin"  : "DEU",
     "Córdoba" : "ESP",
+    "Denver"  : "USA",
     "Kashgar" : "CHN",
     "Lisbon"  : "PRT",
     "London"  : "GBR",
+    "Madrid"  : "ESP",
     "Paris"   : "FRA",
-    "Denver"  : "USA",
     "Warsaw"  : "POL",
 }
 
@@ -67,4 +68,4 @@ for record in cartopy.io.shapereader.Reader(shape_file).records():
     # Guess the correct time zone ...
     gues = 24.0 - diff[iy, ix]                                                  # [hr]
 
-    print("{:7s} ({:3s}) is at {:6.1f}° and should be {:5s} but it is actually {:5s} because noon occurs {:5s} after 0°".format(record.attributes["name_en"], record.attributes["ADM0_A3"], math.degrees(x), flt2hhmm(gues), flt2hhmm(tmzn[iy, ix]), flt2hhmm(diff[iy, ix])))
+    print("{:7s} ({:3s}) is at {:6.1f}° and should be UTC+{:5s} but it is actually UTC+{:5s} because noon occurs {:5s} after 12:00 UTC.".format(record.attributes["name_en"], record.attributes["ADM0_A3"], math.degrees(x), flt2hhmm(gues), flt2hhmm(tmzn[iy, ix]), flt2hhmm(diff[iy, ix])))
