@@ -2,7 +2,6 @@
 
 # Import standard modules ...
 import os
-import subprocess
 
 # Import special modules ...
 try:
@@ -89,13 +88,5 @@ if not os.path.exists(pfile):
 
     # Save PNG ...
     pyguymer3.save_array_as_PNG(img, pfile, ftype_req = 0)
-    subprocess.check_call(
-        ["exiftool", "-overwrite_original", "-all=", pfile],
-        stderr = open(os.devnull, "wt"),
-        stdout = open(os.devnull, "wt")
-    )
-    subprocess.check_call(
-        ["optipng", pfile],
-        stderr = open(os.devnull, "wt"),
-        stdout = open(os.devnull, "wt")
-    )
+    pyguymer3.exiftool(img)
+    pyguymer3.optipng(img)

@@ -2,7 +2,6 @@
 
 # Import standard modules ...
 import os
-import subprocess
 
 # Import special modules ...
 try:
@@ -63,9 +62,9 @@ if not os.path.exists(pfile):
 
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
+    pyguymer3.exiftool(pfile)
+    pyguymer3.optipng(pfile)
     matplotlib.pyplot.close("all")
-    subprocess.check_call(["exiftool", "-overwrite_original", "-all=", pfile], stderr = open(os.devnull, "wt"), stdout = open(os.devnull, "wt"))
-    subprocess.check_call(["optipng", pfile], stderr = open(os.devnull, "wt"), stdout = open(os.devnull, "wt"))
 
 # ******************************************************************************
 
@@ -95,9 +94,9 @@ if not os.path.exists(pfile):
 
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
+    pyguymer3.exiftool(pfile)
+    pyguymer3.optipng(pfile)
     matplotlib.pyplot.close("all")
-    subprocess.check_call(["exiftool", "-overwrite_original", "-all=", pfile], stderr = open(os.devnull, "wt"), stdout = open(os.devnull, "wt"))
-    subprocess.check_call(["optipng", pfile], stderr = open(os.devnull, "wt"), stdout = open(os.devnull, "wt"))
 
 # ******************************************************************************
 
@@ -127,9 +126,9 @@ if not os.path.exists(pfile):
 
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
+    pyguymer3.exiftool(pfile)
+    pyguymer3.optipng(pfile)
     matplotlib.pyplot.close("all")
-    subprocess.check_call(["exiftool", "-overwrite_original", "-all=", pfile], stderr = open(os.devnull, "wt"), stdout = open(os.devnull, "wt"))
-    subprocess.check_call(["optipng", pfile], stderr = open(os.devnull, "wt"), stdout = open(os.devnull, "wt"))
 
 # ******************************************************************************
 
@@ -159,9 +158,9 @@ if not os.path.exists(pfile):
 
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
+    pyguymer3.exiftool(pfile)
+    pyguymer3.optipng(pfile)
     matplotlib.pyplot.close("all")
-    subprocess.check_call(["exiftool", "-overwrite_original", "-all=", pfile], stderr = open(os.devnull, "wt"), stdout = open(os.devnull, "wt"))
-    subprocess.check_call(["optipng", pfile], stderr = open(os.devnull, "wt"), stdout = open(os.devnull, "wt"))
 
 # ******************************************************************************
 
@@ -191,9 +190,9 @@ if not os.path.exists(pfile):
 
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
+    pyguymer3.exiftool(pfile)
+    pyguymer3.optipng(pfile)
     matplotlib.pyplot.close("all")
-    subprocess.check_call(["exiftool", "-overwrite_original", "-all=", pfile], stderr = open(os.devnull, "wt"), stdout = open(os.devnull, "wt"))
-    subprocess.check_call(["optipng", pfile], stderr = open(os.devnull, "wt"), stdout = open(os.devnull, "wt"))
 
 # ******************************************************************************
 
@@ -223,6 +222,6 @@ if not os.path.exists(pfile):
 
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
+    pyguymer3.exiftool(pfile)
+    pyguymer3.optipng(pfile)
     matplotlib.pyplot.close("all")
-    subprocess.check_call(["exiftool", "-overwrite_original", "-all=", pfile], stderr = open(os.devnull, "wt"), stdout = open(os.devnull, "wt"))
-    subprocess.check_call(["optipng", pfile], stderr = open(os.devnull, "wt"), stdout = open(os.devnull, "wt"))
