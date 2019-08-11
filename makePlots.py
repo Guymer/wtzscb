@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 
-# Import modules ...
-import matplotlib
-matplotlib.use("Agg")                                                           # NOTE: http://matplotlib.org/faq/howto_faq.html#matplotlib-in-a-web-application-server
-import matplotlib.pyplot
-import numpy
+# Import standard modules ...
 import os
 import subprocess
 
@@ -14,6 +10,16 @@ try:
     import cartopy.crs
 except:
     raise Exception("run \"pip install --user cartopy\"")
+try:
+    import matplotlib
+    matplotlib.use("Agg")                                                       # NOTE: http://matplotlib.org/faq/howto_faq.html#matplotlib-in-a-web-application-server
+    import matplotlib.pyplot
+except:
+    raise Exception("run \"pip install --user matplotlib\"")
+try:
+    import numpy
+except:
+    raise Exception("run \"pip install --user numpy\"")
 
 # Import my modules ...
 try:

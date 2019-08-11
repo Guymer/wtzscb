@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
 
-# Import modules ...
+# Import standard modules ...
 import math
-import matplotlib
-matplotlib.use("Agg")                                                           # NOTE: http://matplotlib.org/faq/howto_faq.html#matplotlib-in-a-web-application-server
-import matplotlib.pyplot
-import numpy
 import os
 import subprocess
 
@@ -15,6 +11,16 @@ try:
     import cartopy.io.shapereader
 except:
     raise Exception("run \"pip install --user cartopy\"")
+try:
+    import matplotlib
+    matplotlib.use("Agg")                                                       # NOTE: http://matplotlib.org/faq/howto_faq.html#matplotlib-in-a-web-application-server
+    import matplotlib.pyplot
+except:
+    raise Exception("run \"pip install --user matplotlib\"")
+try:
+    import numpy
+except:
+    raise Exception("run \"pip install --user numpy\"")
 try:
     import shapely
 except:

@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
 
-# Import modules ...
+# Import standard modules ...
 import math
-import numpy
 
 # Import special modules ...
 try:
     import cartopy
 except:
     raise Exception("run \"pip install --user cartopy\"")
+try:
+    import numpy
+except:
+    raise Exception("run \"pip install --user numpy\"")
 
 # ******************************************************************************
 
