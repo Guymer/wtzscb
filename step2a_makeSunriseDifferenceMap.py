@@ -118,5 +118,5 @@ if not os.path.exists(pfile):
 
     # Save PNG ...
     pyguymer3.save_array_as_PNG(img, pfile, ftype_req = 0)
-    pyguymer3.exiftool(img)
-    pyguymer3.optipng(img)
+    pyguymer3.exiftool(pfile)
+    pyguymer3.optipng(pfile)
