@@ -33,7 +33,7 @@ if not os.path.exists("elev.bin"):
     # at ...
     nx = 43200                                                                  # [px]
     ny = 21600                                                                  # [px]
-    sc = 100
+    sc = 10
     if nx % sc != 0:
         raise Exception("\"nx\" must be an integer multiple of \"sc\"")
     if ny % sc != 0:
