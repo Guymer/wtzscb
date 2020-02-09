@@ -1,6 +1,6 @@
 # What Time Zone Should Countries Be? (WTZSCB)
 
-This repository contains a few Python scripts to answer the question "What Time Zone Should Countries Be?" in support of [a recent blog post](http://www.thomasguymer.co.uk/blog/2019/2019-07-06/) of mine.
+This repository contains a few Python scripts to answer the question "What Time Zone Should Countries Be?" in support of [a recent blog post](http://thomasguymer.co.uk/blog/2019/2019-07-06/) of mine.
 
 ## Maps
 
