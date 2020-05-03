@@ -6,7 +6,7 @@ import os
 # Import special modules ...
 try:
     import matplotlib
-    matplotlib.use("Agg")                                                       # NOTE: http://matplotlib.org/faq/howto_faq.html#matplotlib-in-a-web-application-server
+    matplotlib.use("Agg")                                                       # NOTE: https://matplotlib.org/gallery/user_interfaces/canvasagg.html
     import matplotlib.pyplot
 except:
     raise Exception("run \"pip install --user matplotlib\"")
