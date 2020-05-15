@@ -78,7 +78,7 @@ if not os.path.exists("elev.bin"):
             # Loop over x-axis ...
             for j in range(4):
                 # Define tile size ...
-                if i == 0 or i == 3:
+                if i in [0, 3]:
                     ncols = 4800                                                # [px]
                 else:
                     ncols = 6000                                                # [px]
