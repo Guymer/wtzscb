@@ -62,8 +62,7 @@ if not os.path.exists(pfile):
 
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
-    pyguymer3.exiftool(pfile)
-    pyguymer3.optipng(pfile)
+    pyguymer3.optimize_image(pfile, strip = True)
     matplotlib.pyplot.close("all")
 
 # ******************************************************************************
@@ -94,8 +93,7 @@ if not os.path.exists(pfile):
 
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
-    pyguymer3.exiftool(pfile)
-    pyguymer3.optipng(pfile)
+    pyguymer3.optimize_image(pfile, strip = True)
     matplotlib.pyplot.close("all")
 
 # ******************************************************************************
@@ -126,8 +124,7 @@ if not os.path.exists(pfile):
 
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
-    pyguymer3.exiftool(pfile)
-    pyguymer3.optipng(pfile)
+    pyguymer3.optimize_image(pfile, strip = True)
     matplotlib.pyplot.close("all")
 
 # ******************************************************************************
@@ -158,8 +155,7 @@ if not os.path.exists(pfile):
 
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
-    pyguymer3.exiftool(pfile)
-    pyguymer3.optipng(pfile)
+    pyguymer3.optimize_image(pfile, strip = True)
     matplotlib.pyplot.close("all")
 
 # ******************************************************************************
@@ -190,8 +186,7 @@ if not os.path.exists(pfile):
 
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
-    pyguymer3.exiftool(pfile)
-    pyguymer3.optipng(pfile)
+    pyguymer3.optimize_image(pfile, strip = True)
     matplotlib.pyplot.close("all")
 
 # ******************************************************************************
@@ -222,6 +217,5 @@ if not os.path.exists(pfile):
 
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
-    pyguymer3.exiftool(pfile)
-    pyguymer3.optipng(pfile)
+    pyguymer3.optimize_image(pfile, strip = True)
     matplotlib.pyplot.close("all")
