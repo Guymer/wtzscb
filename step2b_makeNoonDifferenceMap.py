@@ -58,7 +58,7 @@ if not os.path.exists(bfile):
 
     # Define the reference time as chronological noon on 20-March-2019 and
     # initialize observer ...
-    ref = datetime.datetime(2019, 3, 20, 12, tzinfo = pytz.timezone("UTC"))
+    ref = datetime.datetime(2019, 3, 20, 12, tzinfo = datetime.timezone.utc)
     obs = ephem.Observer()
     obs.date = ephem.Date(ref)
 
