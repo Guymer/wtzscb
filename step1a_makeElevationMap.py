@@ -11,11 +11,11 @@ try:
     matplotlib.use("Agg")                                                       # NOTE: https://matplotlib.org/gallery/user_interfaces/canvasagg.html
     import matplotlib.pyplot
 except:
-    raise Exception("run \"pip install --user matplotlib\"")
+    raise Exception("\"matplotlib\" is not installed; run \"pip install --user matplotlib\"") from None
 try:
     import numpy
 except:
-    raise Exception("run \"pip install --user numpy\"")
+    raise Exception("\"numpy\" is not installed; run \"pip install --user numpy\"") from None
 
 # Import my modules ...
 try:
@@ -35,9 +35,9 @@ if not os.path.exists("elev.bin"):
     ny = 21600                                                                  # [px]
     sc = 100
     if nx % sc != 0:
-        raise Exception("\"nx\" must be an integer multiple of \"sc\"")
+        raise Exception("\"nx\" must be an integer multiple of \"sc\"") from None
     if ny % sc != 0:
-        raise Exception("\"ny\" must be an integer multiple of \"sc\"")
+        raise Exception("\"ny\" must be an integer multiple of \"sc\"") from None
 
     # Define tile names ...
     tiles = [

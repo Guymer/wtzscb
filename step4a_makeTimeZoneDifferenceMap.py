@@ -9,11 +9,11 @@ try:
     matplotlib.use("Agg")                                                       # NOTE: https://matplotlib.org/gallery/user_interfaces/canvasagg.html
     import matplotlib.pyplot
 except:
-    raise Exception("run \"pip install --user matplotlib\"")
+    raise Exception("\"matplotlib\" is not installed; run \"pip install --user matplotlib\"") from None
 try:
     import numpy
 except:
-    raise Exception("run \"pip install --user numpy\"")
+    raise Exception("\"numpy\" is not installed; run \"pip install --user numpy\"") from None
 
 # Import my modules ...
 try:

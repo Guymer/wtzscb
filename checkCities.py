@@ -7,11 +7,11 @@ import math
 try:
     import cartopy
 except:
-    raise Exception("run \"pip install --user cartopy\"")
+    raise Exception("\"cartopy\" is not installed; run \"pip install --user Cartopy\"") from None
 try:
     import numpy
 except:
-    raise Exception("run \"pip install --user numpy\"")
+    raise Exception("\"numpy\" is not installed; run \"pip install --user numpy\"") from None
 
 # ******************************************************************************
 
