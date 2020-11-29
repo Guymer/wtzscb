@@ -107,11 +107,11 @@ if not os.path.exists("elev.bin"):
 
     # Make longitude axis ...
     for ix in range(lon.size):
-        lon[ix] = math.radians(360.0 * (float(ix) + 0.5) / float(lon.size) - 180.0) # [deg]
+        lon[ix] = math.radians(360.0 * (float(ix) + 0.5) / float(lon.size) - 180.0) # [°]
 
     # Make latitude axis ...
     for iy in range(lat.size):
-        lat[lat.size - 1 - iy] = math.radians(180.0 * (float(iy) + 0.5) / float(lat.size) - 90.0)   # [deg]
+        lat[lat.size - 1 - iy] = math.radians(180.0 * (float(iy) + 0.5) / float(lat.size) - 90.0)   # [°]
 
     # Save elevation map along with axes ...
     lon.tofile("lon.bin")
