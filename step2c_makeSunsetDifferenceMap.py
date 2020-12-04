@@ -86,7 +86,7 @@ if not os.path.exists(bfile):
     diff.tofile(bfile)
 else:
     # Load difference map ...
-    diff = numpy.fromfile(bfile, dtype = numpy.float64).reshape(lat.size, lon.size)   # [hr]
+    diff = numpy.fromfile(bfile, dtype = numpy.float64).reshape(lat.size, lon.size) # [hr]
 
 # ******************************************************************************
 
