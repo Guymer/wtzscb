@@ -7,6 +7,7 @@ import os
 # Import special modules ...
 try:
     import cartopy
+    import cartopy.io
     import cartopy.io.shapereader
 except:
     raise Exception("\"cartopy\" is not installed; run \"pip install --user Cartopy\"") from None
