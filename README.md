@@ -32,14 +32,14 @@ Note how the poles' sunrise and sunset are affected by the Earth being tilted (e
 
 "wtzscb" requires the following Python modules to be installed and available in your `PYTHONPATH`.
 
-* [cartopy](https://pypi.org/project/Cartopy)
+* [cartopy](https://pypi.org/project/Cartopy/)
 * [ephem](https://pypi.org/project/ephem/)
-* [matplotlib](https://pypi.org/project/matplotlib)
-* [numpy](https://pypi.org/project/numpy)
+* [matplotlib](https://pypi.org/project/matplotlib/)
+* [numpy](https://pypi.org/project/numpy/)
 * [pyguymer3](https://github.com/Guymer/PyGuymer3)
-* [pytz](https://pypi.org/project/pytz)
-* [requests](https://pypi.org/project/requests)
-* [shapely](https://pypi.org/project/shapely)
+* [pytz](https://pypi.org/project/pytz/)
+* [requests](https://pypi.org/project/requests/)
+* [shapely](https://pypi.org/project/shapely/)
 
 ## External Packages
 
