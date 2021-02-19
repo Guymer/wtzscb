@@ -63,7 +63,7 @@ if not os.path.exists(pfile):
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
     pyguymer3.optimize_image(pfile, strip = True)
-    matplotlib.pyplot.close("all")
+    matplotlib.pyplot.close(fg)
 
 # ******************************************************************************
 
@@ -94,7 +94,7 @@ if not os.path.exists(pfile):
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
     pyguymer3.optimize_image(pfile, strip = True)
-    matplotlib.pyplot.close("all")
+    matplotlib.pyplot.close(fg)
 
 # ******************************************************************************
 
@@ -125,7 +125,7 @@ if not os.path.exists(pfile):
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
     pyguymer3.optimize_image(pfile, strip = True)
-    matplotlib.pyplot.close("all")
+    matplotlib.pyplot.close(fg)
 
 # ******************************************************************************
 
@@ -156,7 +156,7 @@ if not os.path.exists(pfile):
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
     pyguymer3.optimize_image(pfile, strip = True)
-    matplotlib.pyplot.close("all")
+    matplotlib.pyplot.close(fg)
 
 # ******************************************************************************
 
@@ -187,7 +187,7 @@ if not os.path.exists(pfile):
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
     pyguymer3.optimize_image(pfile, strip = True)
-    matplotlib.pyplot.close("all")
+    matplotlib.pyplot.close(fg)
 
 # ******************************************************************************
 
@@ -218,4 +218,4 @@ if not os.path.exists(pfile):
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
     pyguymer3.optimize_image(pfile, strip = True)
-    matplotlib.pyplot.close("all")
+    matplotlib.pyplot.close(fg)
