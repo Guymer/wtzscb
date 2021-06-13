@@ -47,7 +47,7 @@ if not os.path.exists(pfile):
     ax.set_global()
 
     # Add background images ...
-    pyguymer3.add_map_background(ax, name = "step1a", resolution = "step1a")
+    pyguymer3.geo.add_map_background(ax, name = "step1a", resolution = "step1a")
 
     # Add (fake) foreground images ...
     im = ax.imshow(numpy.array([[0.0, 6000.0]]), cmap = "jet")
@@ -78,7 +78,7 @@ if not os.path.exists(pfile):
     ax.set_global()
 
     # Add background images ...
-    pyguymer3.add_map_background(ax, name = "step2a", resolution = "step2a")
+    pyguymer3.geo.add_map_background(ax, name = "step2a", resolution = "step2a")
 
     # Add (fake) foreground images ...
     im = ax.imshow(numpy.array([[0.0, 24.0]]), cmap = "jet")
@@ -109,7 +109,7 @@ if not os.path.exists(pfile):
     ax.set_global()
 
     # Add background images ...
-    pyguymer3.add_map_background(ax, name = "step2b", resolution = "step2b")
+    pyguymer3.geo.add_map_background(ax, name = "step2b", resolution = "step2b")
 
     # Add (fake) foreground images ...
     im = ax.imshow(numpy.array([[0.0, 24.0]]), cmap = "jet")
@@ -140,7 +140,7 @@ if not os.path.exists(pfile):
     ax.set_global()
 
     # Add background images ...
-    pyguymer3.add_map_background(ax, name = "step2c", resolution = "step2c")
+    pyguymer3.geo.add_map_background(ax, name = "step2c", resolution = "step2c")
 
     # Add (fake) foreground images ...
     im = ax.imshow(numpy.array([[0.0, 24.0]]), cmap = "jet")
@@ -171,7 +171,7 @@ if not os.path.exists(pfile):
     ax.set_global()
 
     # Add background images ...
-    pyguymer3.add_map_background(ax, name = "step3a", resolution = "step3a")
+    pyguymer3.geo.add_map_background(ax, name = "step3a", resolution = "step3a")
 
     # Add (fake) foreground images ...
     im = ax.imshow(numpy.array([[0.0, 24.0]]), cmap = "jet")
@@ -202,7 +202,7 @@ if not os.path.exists(pfile):
     ax.set_global()
 
     # Add background images ...
-    pyguymer3.add_map_background(ax, name = "step4a", resolution = "step4a")
+    pyguymer3.geo.add_map_background(ax, name = "step4a", resolution = "step4a")
 
     # Add (fake) foreground images ...
     im = ax.imshow(numpy.array([[-3.0, 3.0]]), cmap = "seismic")
