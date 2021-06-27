@@ -29,6 +29,7 @@ except:
 # Import my modules ...
 try:
     import pyguymer3
+    import pyguymer3.image
 except:
     raise Exception("\"pyguymer3\" is not installed; you need to have the Python module from https://github.com/Guymer/PyGuymer3 located somewhere in your $PYTHONPATH") from None
 
@@ -116,5 +117,5 @@ if not os.path.exists(pfile):
             img[iy, ix, 2] = 255.0 * b
 
     # Save PNG ...
-    pyguymer3.save_array_as_PNG(img, pfile, ftype_req = 0)
-    pyguymer3.optimize_image(pfile, strip = True)
+    pyguymer3.image.save_array_as_PNG(img, pfile, ftype_req = 0)
+    pyguymer3.image.optimize_image(pfile, strip = True)

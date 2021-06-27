@@ -24,6 +24,7 @@ except:
 try:
     import pyguymer3
     import pyguymer3.geo
+    import pyguymer3.image
 except:
     raise Exception("\"pyguymer3\" is not installed; you need to have the Python module from https://github.com/Guymer/PyGuymer3 located somewhere in your $PYTHONPATH") from None
 
@@ -63,7 +64,7 @@ if not os.path.exists(pfile):
 
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
-    pyguymer3.optimize_image(pfile, strip = True)
+    pyguymer3.image.optimize_image(pfile, strip = True)
     matplotlib.pyplot.close(fg)
 
 # ******************************************************************************
@@ -94,7 +95,7 @@ if not os.path.exists(pfile):
 
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
-    pyguymer3.optimize_image(pfile, strip = True)
+    pyguymer3.image.optimize_image(pfile, strip = True)
     matplotlib.pyplot.close(fg)
 
 # ******************************************************************************
@@ -125,7 +126,7 @@ if not os.path.exists(pfile):
 
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
-    pyguymer3.optimize_image(pfile, strip = True)
+    pyguymer3.image.optimize_image(pfile, strip = True)
     matplotlib.pyplot.close(fg)
 
 # ******************************************************************************
@@ -156,7 +157,7 @@ if not os.path.exists(pfile):
 
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
-    pyguymer3.optimize_image(pfile, strip = True)
+    pyguymer3.image.optimize_image(pfile, strip = True)
     matplotlib.pyplot.close(fg)
 
 # ******************************************************************************
@@ -187,7 +188,7 @@ if not os.path.exists(pfile):
 
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
-    pyguymer3.optimize_image(pfile, strip = True)
+    pyguymer3.image.optimize_image(pfile, strip = True)
     matplotlib.pyplot.close(fg)
 
 # ******************************************************************************
@@ -218,5 +219,5 @@ if not os.path.exists(pfile):
 
     # Save plot ...
     fg.savefig(pfile, bbox_inches = "tight", dpi = 300, pad_inches = 0.1)
-    pyguymer3.optimize_image(pfile, strip = True)
+    pyguymer3.image.optimize_image(pfile, strip = True)
     matplotlib.pyplot.close(fg)
