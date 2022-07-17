@@ -45,7 +45,7 @@ if not os.path.exists(pfile):
 
     # Create plot ...
     fg = matplotlib.pyplot.figure(figsize = (9, 4), dpi = 300)
-    ax = matplotlib.pyplot.axes(projection = cartopy.crs.Robinson())
+    ax = fg.add_subplot(projection = cartopy.crs.Robinson())
     ax.set_global()
 
     # Add background images ...
@@ -76,7 +76,7 @@ if not os.path.exists(pfile):
 
     # Create plot ...
     fg = matplotlib.pyplot.figure(figsize = (9, 4), dpi = 300)
-    ax = matplotlib.pyplot.axes(projection = cartopy.crs.Robinson())
+    ax = fg.add_subplot(projection = cartopy.crs.Robinson())
     ax.set_global()
 
     # Add background images ...
@@ -107,7 +107,7 @@ if not os.path.exists(pfile):
 
     # Create plot ...
     fg = matplotlib.pyplot.figure(figsize = (9, 4), dpi = 300)
-    ax = matplotlib.pyplot.axes(projection = cartopy.crs.Robinson())
+    ax = fg.add_subplot(projection = cartopy.crs.Robinson())
     ax.set_global()
 
     # Add background images ...
@@ -138,7 +138,7 @@ if not os.path.exists(pfile):
 
     # Create plot ...
     fg = matplotlib.pyplot.figure(figsize = (9, 4), dpi = 300)
-    ax = matplotlib.pyplot.axes(projection = cartopy.crs.Robinson())
+    ax = fg.add_subplot(projection = cartopy.crs.Robinson())
     ax.set_global()
 
     # Add background images ...
@@ -169,7 +169,7 @@ if not os.path.exists(pfile):
 
     # Create plot ...
     fg = matplotlib.pyplot.figure(figsize = (9, 4), dpi = 300)
-    ax = matplotlib.pyplot.axes(projection = cartopy.crs.Robinson())
+    ax = fg.add_subplot(projection = cartopy.crs.Robinson())
     ax.set_global()
 
     # Add background images ...
@@ -200,7 +200,7 @@ if not os.path.exists(pfile):
 
     # Create plot ...
     fg = matplotlib.pyplot.figure(figsize = (9, 4), dpi = 300)
-    ax = matplotlib.pyplot.axes(projection = cartopy.crs.Robinson())
+    ax = fg.add_subplot(projection = cartopy.crs.Robinson())
     ax.set_global()
 
     # Add background images ...
