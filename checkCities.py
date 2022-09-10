@@ -13,6 +13,13 @@ try:
 except:
     raise Exception("\"numpy\" is not installed; run \"pip install --user numpy\"") from None
 
+# Import my modules ...
+try:
+    import pyguymer3
+    import pyguymer3.geo
+except:
+    raise Exception("\"pyguymer3\" is not installed; you need to have the Python module from https://github.com/Guymer/PyGuymer3 located somewhere in your $PYTHONPATH") from None
+
 # ******************************************************************************
 
 # Create list of cities of interest ...
@@ -35,7 +42,7 @@ cities = {
 def flt2hhmm(flt):
     hh = int(math.floor(flt))                                                   # [hr]
     mm = int(round(60.0 * (flt % 1.0)))                                         # [min]
-    return "{:02d}:{:02d}".format(hh, mm)
+    return f"{hh:02d}:{mm:02d}"
 
 # Load axes and arrays ...
 lon = numpy.fromfile("lon.bin", dtype = numpy.float64)                          # [rad]
@@ -46,20 +53,24 @@ tmzn = numpy.fromfile("timeZone.bin", dtype = numpy.float64).reshape(lat.size, l
 # ******************************************************************************
 
 # Find file containing all the country shapes ...
-shape_file = cartopy.io.shapereader.natural_earth(
-    resolution = "10m",
+sfile = cartopy.io.shapereader.natural_earth(
       category = "cultural",
-          name = "populated_places"
+          name = "populated_places",
+    resolution = "10m",
 )
 
 # Loop over records ...
-for record in cartopy.io.shapereader.Reader(shape_file).records():
+for record in cartopy.io.shapereader.Reader(sfile).records():
+    # Create short-hands ...
+    neA3 = pyguymer3.geo.getRecordAttribute(record, "ADM0_A3")
+    neName = pyguymer3.geo.getRecordAttribute(record, "NAME")
+
     # Skip this record if it is not one of the cities of interest ...
-    if record.attributes["NAME"] not in cities.keys():
+    if neName not in cities:
         continue
 
     # Skip this record if it is not in the correct country ...
-    if record.attributes["ADM0_A3"] != cities[record.attributes["NAME"]]:
+    if neA3 != cities[neName]:
         continue
 
     # Find its location and determine the closest pixel to it ...
@@ -71,4 +82,4 @@ for record in cartopy.io.shapereader.Reader(shape_file).records():
     # Guess the correct time zone ...
     gues = 24.0 - diff[iy, ix]                                                  # [hr]
 
-    print("{:7s} ({:3s}) is at {:6.1f}° and should be UTC+{:5s} but it is actually UTC+{:5s} because noon occurs {:5s} after 12:00 UTC.".format(record.attributes["name_en"], record.attributes["ADM0_A3"], math.degrees(x), flt2hhmm(gues), flt2hhmm(tmzn[iy, ix]), flt2hhmm(diff[iy, ix])))
+    print(f"{neName:7s} ({neA3:3s}) is at {math.degrees(x):6.1f}° and should be UTC+{flt2hhmm(gues):5s} but it is actually UTC+{flt2hhmm(tmzn[iy, ix]):5s} because noon occurs {flt2hhmm(diff[iy, ix]):5s} after 12:00 UTC.")
