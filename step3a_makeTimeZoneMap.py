@@ -29,6 +29,7 @@ except:
 # Import my modules ...
 try:
     import pyguymer3
+    import pyguymer3.geo
     import pyguymer3.image
 except:
     raise Exception("\"pyguymer3\" is not installed; you need to have the Python module from https://github.com/Guymer/PyGuymer3 located somewhere in your $PYTHONPATH") from None
@@ -44,7 +45,7 @@ lat = numpy.fromfile("lat.bin", dtype = numpy.float64)                          
 # Define BIN file name and check if it exists already ...
 bfile = "timeZone.bin"
 if not os.path.exists(bfile):
-    print("Making \"{:s}\" ...".format(bfile))
+    print(f"Making \"{bfile}\" ...")
 
     # Make time zone map ...
     tmzn = numpy.zeros((lat.size, lon.size), dtype = numpy.float64)             # [hr]
@@ -66,10 +67,10 @@ if not os.path.exists(bfile):
 
     # Loop over records ...
     for record in cartopy.io.shapereader.Reader(shape_file).records():
-        # Calculate offset ...
-        off = record.attributes["zone"]                                         # [hr]
-        if off < 0.0:
-            off += 24.0                                                         # [hr]
+        # Create short-hand ...
+        neZone = pyguymer3.geo.getRecordAttribute(record, "ZONE")               # [hr]
+        if neZone < 0.0:
+            neZone += 24.0                                                      # [hr]
 
         # Loop over x-axis ...
         for ix in range(lon.size):
@@ -80,7 +81,7 @@ if not os.path.exists(bfile):
                     continue
 
                 # Set pixel to time zone ...
-                tmzn[iy, ix] = off                                              # [hr]
+                tmzn[iy, ix] = neZone                                           # [hr]
 
     # Save time zone map ...
     tmzn.tofile(bfile)
@@ -93,7 +94,7 @@ else:
 # Define PNG file name and check if it exists already ...
 pfile = "timeZone.png"
 if not os.path.exists(pfile):
-    print("Making \"{:s}\" ...".format(pfile))
+    print(f"Making \"{pfile}\" ...")
 
     # Create short-hand ...
     cm = matplotlib.pyplot.get_cmap("jet")
