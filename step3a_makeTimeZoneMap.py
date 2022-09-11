@@ -59,14 +59,14 @@ if not os.path.exists(bfile):
         pnt.append(tmp)
 
     # Find file containing all the country shapes ...
-    shape_file = cartopy.io.shapereader.natural_earth(
+    sfile = cartopy.io.shapereader.natural_earth(
         resolution = "10m",
           category = "cultural",
               name = "time_zones"
     )
 
     # Loop over records ...
-    for record in cartopy.io.shapereader.Reader(shape_file).records():
+    for record in cartopy.io.shapereader.Reader(sfile).records():
         # Create short-hand ...
         neZone = pyguymer3.geo.getRecordAttribute(record, "ZONE")               # [hr]
         if neZone < 0.0:
