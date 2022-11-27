@@ -35,7 +35,7 @@ tmzn = numpy.fromfile("timeZone.bin", dtype = numpy.float64).reshape(lat.size, l
 # Define BIN file name and check if it exists already ...
 bfile = "timeZoneDiff.bin"
 if not os.path.exists(bfile):
-    print("Making \"{:s}\" ...".format(bfile))
+    print(f"Making \"{bfile}\" ...")
 
     # Make time zone difference map ...
     offs = numpy.zeros((lat.size, lon.size), dtype = numpy.float64)             # [hr]
@@ -64,7 +64,7 @@ else:
 # Define PNG file name and check if it exists already ...
 pfile = "timeZoneDiff.png"
 if not os.path.exists(pfile):
-    print("Making \"{:s}\" ...".format(pfile))
+    print(f"Making \"{pfile}\" ...")
 
     # Create short-hand ...
     cm = matplotlib.pyplot.get_cmap("seismic")

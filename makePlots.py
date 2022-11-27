@@ -41,7 +41,7 @@ matplotlib.pyplot.rcParams.update({"font.size" : 8})
 # Define PNG file name and check if it exists already ...
 pfile = "step1a.png"
 if not os.path.exists(pfile):
-    print("Making \"{:s}\" ...".format(pfile))
+    print(f"Making \"{pfile}\" ...")
 
     # Create plot ...
     fg = matplotlib.pyplot.figure(figsize = (9, 4), dpi = 300)
@@ -72,7 +72,7 @@ if not os.path.exists(pfile):
 # Define PNG file name and check if it exists already ...
 pfile = "step2a.png"
 if not os.path.exists(pfile):
-    print("Making \"{:s}\" ...".format(pfile))
+    print(f"Making \"{pfile}\" ...")
 
     # Create plot ...
     fg = matplotlib.pyplot.figure(figsize = (9, 4), dpi = 300)
@@ -103,7 +103,7 @@ if not os.path.exists(pfile):
 # Define PNG file name and check if it exists already ...
 pfile = "step2b.png"
 if not os.path.exists(pfile):
-    print("Making \"{:s}\" ...".format(pfile))
+    print(f"Making \"{pfile}\" ...")
 
     # Create plot ...
     fg = matplotlib.pyplot.figure(figsize = (9, 4), dpi = 300)
@@ -134,7 +134,7 @@ if not os.path.exists(pfile):
 # Define PNG file name and check if it exists already ...
 pfile = "step2c.png"
 if not os.path.exists(pfile):
-    print("Making \"{:s}\" ...".format(pfile))
+    print(f"Making \"{pfile}\" ...")
 
     # Create plot ...
     fg = matplotlib.pyplot.figure(figsize = (9, 4), dpi = 300)
@@ -165,7 +165,7 @@ if not os.path.exists(pfile):
 # Define PNG file name and check if it exists already ...
 pfile = "step3a.png"
 if not os.path.exists(pfile):
-    print("Making \"{:s}\" ...".format(pfile))
+    print(f"Making \"{pfile}\" ...")
 
     # Create plot ...
     fg = matplotlib.pyplot.figure(figsize = (9, 4), dpi = 300)
@@ -196,7 +196,7 @@ if not os.path.exists(pfile):
 # Define PNG file name and check if it exists already ...
 pfile = "step4a.png"
 if not os.path.exists(pfile):
-    print("Making \"{:s}\" ...".format(pfile))
+    print(f"Making \"{pfile}\" ...")
 
     # Create plot ...
     fg = matplotlib.pyplot.figure(figsize = (9, 4), dpi = 300)

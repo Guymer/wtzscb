@@ -133,7 +133,7 @@ else:
 # Define PNG file name and check if it exists already ...
 pfile = "elev.png"
 if not os.path.exists(pfile):
-    print("Making \"{:s}\" ...".format(pfile))
+    print(f"Making \"{pfile}\" ...")
 
     # Create short-hand ...
     cm = matplotlib.pyplot.get_cmap("jet")

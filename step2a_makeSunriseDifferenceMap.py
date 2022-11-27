@@ -52,7 +52,7 @@ elev = numpy.fromfile("elev.bin", dtype = numpy.float64).reshape(lat.size, lon.s
 # Define BIN file name and check if it exists already ...
 bfile = "sunriseDiff.bin"
 if not os.path.exists(bfile):
-    print("Making \"{:s}\" ...".format(bfile))
+    print(f"Making \"{bfile}\" ...")
 
     # Make difference map ...
     diff = numpy.zeros((lat.size, lon.size), dtype = numpy.float64)             # [hr]
@@ -94,7 +94,7 @@ else:
 # Define PNG file name and check if it exists already ...
 pfile = "sunriseDiff.png"
 if not os.path.exists(pfile):
-    print("Making \"{:s}\" ...".format(pfile))
+    print(f"Making \"{pfile}\" ...")
 
     # Create short-hand ...
     cm = matplotlib.pyplot.get_cmap("jet")
