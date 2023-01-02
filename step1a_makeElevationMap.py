@@ -69,7 +69,7 @@ if not os.path.exists("elev.bin"):
     scElev = numpy.zeros((lat.size, lon.size), dtype = numpy.float64)           # [m]
 
     # Load dataset ...
-    with zipfile.ZipFile("all10g.zip", "r") as fobj:
+    with zipfile.ZipFile("all10g.zip", "r") as fObj:
         # Initialize index ...
         iy = 0                                                                  # [px]
 
@@ -89,7 +89,7 @@ if not os.path.exists("elev.bin"):
 
                 # Load tile ...
                 tile = numpy.frombuffer(
-                    fobj.read(bins[j + i * 4]),
+                    fObj.read(bins[j + i * 4]),
                     dtype = numpy.int16
                 ).reshape(nrows, ncols)                                         # [m]
 
