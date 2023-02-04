@@ -44,7 +44,7 @@ if __name__ == "__main__":
     # **************************************************************************
 
     # Define function ...
-    def horizon(e):
+    def horizon(e, /):
         # Calculate the angle below horizontal down to the horizon due to the
         # observer being above the radius of the Earth ...
         return -math.acos(ephem.earth_radius / (e + ephem.earth_radius))        # [rad]

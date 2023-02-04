@@ -42,7 +42,7 @@ if __name__ == "__main__":
     # ******************************************************************************
 
     # Define function ...
-    def flt2hhmm(flt):
+    def flt2hhmm(flt, /):
         hh = int(math.floor(flt))                                               # [hr]
         mm = int(round(60.0 * (flt % 1.0)))                                     # [min]
         return f"{hh:02d}:{mm:02d}"
