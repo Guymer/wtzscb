@@ -37,7 +37,6 @@ Note how the poles' sunrise and sunset are affected by the Earth being tilted (e
 * [matplotlib](https://pypi.org/project/matplotlib/)
 * [numpy](https://pypi.org/project/numpy/)
 * [pyguymer3](https://github.com/Guymer/PyGuymer3)
-* [pytz](https://pypi.org/project/pytz/)
 * [requests](https://pypi.org/project/requests/)
 * [shapely](https://pypi.org/project/Shapely/)
 

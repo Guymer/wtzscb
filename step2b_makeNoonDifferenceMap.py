@@ -29,10 +29,6 @@ if __name__ == "__main__":
         import numpy
     except:
         raise Exception("\"numpy\" is not installed; run \"pip install --user numpy\"") from None
-    try:
-        import pytz
-    except:
-        raise Exception("\"pytz\" is not installed; run \"pip install --user pytz\"") from None
 
     # Import my modules ...
     try:
@@ -82,8 +78,9 @@ if __name__ == "__main__":
                 obs.elevation = elev[iy, ix]                                    # [m]
                 obs.horizon = horizon(elev[iy, ix])                             # [rad]
 
-                # Find the next time that the Sun will cross the meridian ...
-                noon = pytz.timezone("UTC").localize(obs.next_transit(ephem.Sun()).datetime())
+                # Find the next time that the Sun will cross the meridian (as an
+                # 'aware' datetime object in UTC) ...
+                noon = obs.next_transit(ephem.Sun()).datetime().replace(tzinfo = datetime.timezone.utc)
 
                 # Find out the difference from the reference time ...
                 diff[iy, ix] = (noon - ref).total_seconds() / 3600.0            # [hr]

@@ -29,10 +29,6 @@ if __name__ == "__main__":
         import numpy
     except:
         raise Exception("\"numpy\" is not installed; run \"pip install --user numpy\"") from None
-    try:
-        import pytz
-    except:
-        raise Exception("\"pytz\" is not installed; run \"pip install --user pytz\"") from None
 
     # Import my modules ...
     try:
@@ -82,9 +78,10 @@ if __name__ == "__main__":
                 obs.elevation = elev[iy, ix]                                    # [m]
                 obs.horizon = horizon(elev[iy, ix])                             # [rad]
 
-                # Find the next time that the Sun will rise ...
+                # Find the next time that the Sun will set (as an 'aware'
+                # datetime object in UTC) ...
                 try:
-                    noon = pytz.timezone("UTC").localize(obs.next_setting(ephem.Sun()).datetime())
+                    noon = obs.next_setting(ephem.Sun()).datetime().replace(tzinfo = datetime.timezone.utc)
                 except ephem.AlwaysUpError:
                     diff[iy, ix] = -1.0                                         # [hr]
                     continue
