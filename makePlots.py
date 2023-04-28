@@ -70,7 +70,7 @@ if __name__ == "__main__":
         cb.set_label("Elevation [m]")
 
         # Configure axis ...
-        ax.coastlines(resolution = "10m", color = "white", linewidth = 0.1)
+        pyguymer3.geo.add_coastlines(ax, colorName = "white", resolution = "i")
 
         # Configure figure ...
         fg.tight_layout()
@@ -110,7 +110,7 @@ if __name__ == "__main__":
         cb.set_label("Time Until Sunrise After 12:00 UTC [hr]")
 
         # Configure axis ...
-        ax.coastlines(resolution = "10m", color = "white", linewidth = 0.1)
+        pyguymer3.geo.add_coastlines(ax, colorName = "white", resolution = "i")
 
         # Configure figure ...
         fg.tight_layout()
@@ -150,7 +150,7 @@ if __name__ == "__main__":
         cb.set_label("Time Until Noon After 12:00 UTC [hr]")
 
         # Configure axis ...
-        ax.coastlines(resolution = "10m", color = "white", linewidth = 0.1)
+        pyguymer3.geo.add_coastlines(ax, colorName = "white", resolution = "i")
 
         # Configure figure ...
         fg.tight_layout()
@@ -190,7 +190,7 @@ if __name__ == "__main__":
         cb.set_label("Time Until Sunset After 12:00 UTC [hr]")
 
         # Configure axis ...
-        ax.coastlines(resolution = "10m", color = "white", linewidth = 0.1)
+        pyguymer3.geo.add_coastlines(ax, colorName = "white", resolution = "i")
 
         # Configure figure ...
         fg.tight_layout()
@@ -230,7 +230,7 @@ if __name__ == "__main__":
         cb.set_label("Time Zone Difference From UTC [hr]")
 
         # Configure axis ...
-        ax.coastlines(resolution = "10m", color = "white", linewidth = 0.1)
+        pyguymer3.geo.add_coastlines(ax, colorName = "white", resolution = "i")
 
         # Configure figure ...
         fg.tight_layout()
@@ -270,7 +270,7 @@ if __name__ == "__main__":
         cb.set_label("Difference Between Noon & Time Zone [hr]")
 
         # Configure axis ...
-        ax.coastlines(resolution = "10m", color = "black", linewidth = 0.1)
+        pyguymer3.geo.add_coastlines(ax, resolution = "i")
 
         # Configure figure ...
         fg.tight_layout()
