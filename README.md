@@ -30,7 +30,7 @@ Note how the poles' sunrise and sunset are affected by the Earth being tilted (e
 
 ## Dependencies
 
-"wtzscb" requires the following Python modules to be installed and available in your `PYTHONPATH`.
+WTZSCB requires the following Python modules to be installed and available in your `PYTHONPATH`.
 
 * [cartopy](https://pypi.org/project/Cartopy/)
 * [ephem](https://pypi.org/project/ephem/)
@@ -39,6 +39,8 @@ Note how the poles' sunrise and sunset are affected by the Earth being tilted (e
 * [pyguymer3](https://github.com/Guymer/PyGuymer3)
 * [requests](https://pypi.org/project/requests/)
 * [shapely](https://pypi.org/project/Shapely/)
+
+WTZSCB uses some [Global Self-Consistent Hierarchical High-Resolution Geography](https://www.ngdc.noaa.gov/mgg/shorelines/) resources and some [Natural Earth](https://www.naturalearthdata.com/) resources via the [cartopy](https://pypi.org/project/Cartopy/) module. If they do not exist on your system then [cartopy](https://pypi.org/project/Cartopy/) will download them for you in the background. Consequently, a working internet connection may be required the first time you run WTZSCB.
 
 ## External Packages
 
