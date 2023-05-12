@@ -5,7 +5,6 @@
 if __name__ == "__main__":
     # Import standard modules ...
     import datetime
-    import math
     import os
 
     # Import special modules ...
@@ -37,13 +36,8 @@ if __name__ == "__main__":
     except:
         raise Exception("\"pyguymer3\" is not installed; you need to have the Python module from https://github.com/Guymer/PyGuymer3 located somewhere in your $PYTHONPATH") from None
 
-    # **************************************************************************
-
-    # Define function ...
-    def horizon(e, /):
-        # Calculate the angle below horizontal down to the horizon due to the
-        # observer being above the radius of the Earth ...
-        return -math.acos(ephem.earth_radius / (e + ephem.earth_radius))        # [rad]
+    # Import local modules ...
+    import funcs
 
     # **************************************************************************
 
@@ -76,7 +70,7 @@ if __name__ == "__main__":
                 obs.lat = lat[iy]                                               # [rad]
                 obs.long = lon[ix]                                              # [rad]
                 obs.elevation = elev[iy, ix]                                    # [m]
-                obs.horizon = horizon(elev[iy, ix])                             # [rad]
+                obs.horizon = funcs.horizon(elev[iy, ix])                       # [rad]
 
                 # Find the next time that the Sun will rise (as an 'aware'
                 # datetime object in UTC) ...
