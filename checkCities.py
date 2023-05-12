@@ -42,6 +42,8 @@ if __name__ == "__main__":
     # ******************************************************************************
 
     # Define function ...
+    # NOTE: This function exists because "datetime.timedelta" doesn't have a
+    #       "strftime()" method.
     def flt2hhmm(flt, /):
         hh = int(math.floor(flt))                                               # [hr]
         mm = int(round(60.0 * (flt % 1.0)))                                     # [min]
