@@ -15,9 +15,10 @@ if __name__ == "__main__":
         import matplotlib
         matplotlib.rcParams.update(
             {
-                   "backend" : "Agg",                                           # NOTE: See https://matplotlib.org/stable/gallery/user_interfaces/canvasagg.html
-                "figure.dpi" : 300,
-                 "font.size" : 8,
+                       "backend" : "Agg",                                       # NOTE: See https://matplotlib.org/stable/gallery/user_interfaces/canvasagg.html
+                    "figure.dpi" : 300,
+                "figure.figsize" : (9.6, 7.2),                                  # NOTE: See https://github.com/Guymer/misc/blob/main/README.md#matplotlib-figure-sizes
+                     "font.size" : 8,
             }
         )
         import matplotlib.pyplot
@@ -49,7 +50,7 @@ if __name__ == "__main__":
         print(f"Making \"{pfile}\" ...")
 
         # Create figure ...
-        fg = matplotlib.pyplot.figure(figsize = (9, 4))
+        fg = matplotlib.pyplot.figure()
 
         # Create axis ...
         ax = fg.add_subplot(projection = cartopy.crs.Robinson())
@@ -63,7 +64,7 @@ if __name__ == "__main__":
         im.set_visible(False)
 
         # Add colour bar ...
-        cb = fg.colorbar(im, orientation = "vertical", ax = ax)
+        cb = fg.colorbar(im, ax = ax, orientation = "horizontal")
 
         # Configure colour bar ...
         cb.set_label("Elevation [m]")
@@ -89,7 +90,7 @@ if __name__ == "__main__":
         print(f"Making \"{pfile}\" ...")
 
         # Create figure ...
-        fg = matplotlib.pyplot.figure(figsize = (9, 4))
+        fg = matplotlib.pyplot.figure()
 
         # Create axis ...
         ax = fg.add_subplot(projection = cartopy.crs.Robinson())
@@ -103,7 +104,7 @@ if __name__ == "__main__":
         im.set_visible(False)
 
         # Add colour bar ...
-        cb = fg.colorbar(im, orientation = "vertical", ax = ax)
+        cb = fg.colorbar(im, ax = ax, orientation = "horizontal")
 
         # Configure colour bar ...
         cb.set_label("Time Until Sunrise After 12:00 UTC [hr]")
@@ -129,7 +130,7 @@ if __name__ == "__main__":
         print(f"Making \"{pfile}\" ...")
 
         # Create figure ...
-        fg = matplotlib.pyplot.figure(figsize = (9, 4))
+        fg = matplotlib.pyplot.figure()
 
         # Create axis ...
         ax = fg.add_subplot(projection = cartopy.crs.Robinson())
@@ -143,7 +144,7 @@ if __name__ == "__main__":
         im.set_visible(False)
 
         # Add colour bar ...
-        cb = fg.colorbar(im, orientation = "vertical", ax = ax)
+        cb = fg.colorbar(im, ax = ax, orientation = "horizontal")
 
         # Configure colour bar ...
         cb.set_label("Time Until Noon After 12:00 UTC [hr]")
@@ -169,7 +170,7 @@ if __name__ == "__main__":
         print(f"Making \"{pfile}\" ...")
 
         # Create figure ...
-        fg = matplotlib.pyplot.figure(figsize = (9, 4))
+        fg = matplotlib.pyplot.figure()
 
         # Create axis ...
         ax = fg.add_subplot(projection = cartopy.crs.Robinson())
@@ -183,7 +184,7 @@ if __name__ == "__main__":
         im.set_visible(False)
 
         # Add colour bar ...
-        cb = fg.colorbar(im, orientation = "vertical", ax = ax)
+        cb = fg.colorbar(im, ax = ax, orientation = "horizontal")
 
         # Configure colour bar ...
         cb.set_label("Time Until Sunset After 12:00 UTC [hr]")
@@ -209,7 +210,7 @@ if __name__ == "__main__":
         print(f"Making \"{pfile}\" ...")
 
         # Create figure ...
-        fg = matplotlib.pyplot.figure(figsize = (9, 4))
+        fg = matplotlib.pyplot.figure()
 
         # Create axis ...
         ax = fg.add_subplot(projection = cartopy.crs.Robinson())
@@ -223,7 +224,7 @@ if __name__ == "__main__":
         im.set_visible(False)
 
         # Add colour bar ...
-        cb = fg.colorbar(im, orientation = "vertical", ax = ax)
+        cb = fg.colorbar(im, ax = ax, orientation = "horizontal")
 
         # Configure colour bar ...
         cb.set_label("Time Zone Difference From UTC [hr]")
@@ -249,7 +250,7 @@ if __name__ == "__main__":
         print(f"Making \"{pfile}\" ...")
 
         # Create figure ...
-        fg = matplotlib.pyplot.figure(figsize = (9, 4))
+        fg = matplotlib.pyplot.figure()
 
         # Create axis ...
         ax = fg.add_subplot(projection = cartopy.crs.Robinson())
@@ -263,7 +264,7 @@ if __name__ == "__main__":
         im.set_visible(False)
 
         # Add colour bar ...
-        cb = fg.colorbar(im, orientation = "vertical", ax = ax)
+        cb = fg.colorbar(im, ax = ax, orientation = "horizontal")
 
         # Configure colour bar ...
         cb.set_label("Difference Between Noon & Time Zone [hr]")
