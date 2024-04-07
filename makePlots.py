@@ -61,7 +61,6 @@ if __name__ == "__main__":
         ax = pyguymer3.geo.add_axis(fg)
 
         # Configure axis ...
-        ax.set_global()
         pyguymer3.geo.add_map_background(ax, name = "step1a", resolution = "step1a")
 
         # Add (fake) foreground images ...
@@ -101,7 +100,6 @@ if __name__ == "__main__":
         ax = pyguymer3.geo.add_axis(fg)
 
         # Configure axis ...
-        ax.set_global()
         pyguymer3.geo.add_map_background(ax, name = "step2a", resolution = "step2a")
 
         # Add (fake) foreground images ...
@@ -141,7 +139,6 @@ if __name__ == "__main__":
         ax = pyguymer3.geo.add_axis(fg)
 
         # Configure axis ...
-        ax.set_global()
         pyguymer3.geo.add_map_background(ax, name = "step2b", resolution = "step2b")
 
         # Add (fake) foreground images ...
@@ -181,7 +178,6 @@ if __name__ == "__main__":
         ax = pyguymer3.geo.add_axis(fg)
 
         # Configure axis ...
-        ax.set_global()
         pyguymer3.geo.add_map_background(ax, name = "step2c", resolution = "step2c")
 
         # Add (fake) foreground images ...
@@ -221,7 +217,6 @@ if __name__ == "__main__":
         ax = pyguymer3.geo.add_axis(fg)
 
         # Configure axis ...
-        ax.set_global()
         pyguymer3.geo.add_map_background(ax, name = "step3a", resolution = "step3a")
 
         # Add (fake) foreground images ...
@@ -261,7 +256,6 @@ if __name__ == "__main__":
         ax = pyguymer3.geo.add_axis(fg)
 
         # Configure axis ...
-        ax.set_global()
         pyguymer3.geo.add_map_background(ax, name = "step4a", resolution = "step4a")
 
         # Add (fake) foreground images ...
