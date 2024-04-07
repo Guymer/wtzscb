@@ -58,7 +58,7 @@ if __name__ == "__main__":
         fg = matplotlib.pyplot.figure()
 
         # Create axis ...
-        ax = fg.add_subplot(projection = cartopy.crs.Robinson())
+        ax = pyguymer3.geo.add_axis(fg)
 
         # Configure axis ...
         ax.set_global()
@@ -98,7 +98,7 @@ if __name__ == "__main__":
         fg = matplotlib.pyplot.figure()
 
         # Create axis ...
-        ax = fg.add_subplot(projection = cartopy.crs.Robinson())
+        ax = pyguymer3.geo.add_axis(fg)
 
         # Configure axis ...
         ax.set_global()
@@ -138,7 +138,7 @@ if __name__ == "__main__":
         fg = matplotlib.pyplot.figure()
 
         # Create axis ...
-        ax = fg.add_subplot(projection = cartopy.crs.Robinson())
+        ax = pyguymer3.geo.add_axis(fg)
 
         # Configure axis ...
         ax.set_global()
@@ -178,7 +178,7 @@ if __name__ == "__main__":
         fg = matplotlib.pyplot.figure()
 
         # Create axis ...
-        ax = fg.add_subplot(projection = cartopy.crs.Robinson())
+        ax = pyguymer3.geo.add_axis(fg)
 
         # Configure axis ...
         ax.set_global()
@@ -218,7 +218,7 @@ if __name__ == "__main__":
         fg = matplotlib.pyplot.figure()
 
         # Create axis ...
-        ax = fg.add_subplot(projection = cartopy.crs.Robinson())
+        ax = pyguymer3.geo.add_axis(fg)
 
         # Configure axis ...
         ax.set_global()
@@ -258,7 +258,7 @@ if __name__ == "__main__":
         fg = matplotlib.pyplot.figure()
 
         # Create axis ...
-        ax = fg.add_subplot(projection = cartopy.crs.Robinson())
+        ax = pyguymer3.geo.add_axis(fg)
 
         # Configure axis ...
         ax.set_global()
