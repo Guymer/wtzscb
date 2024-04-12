@@ -58,7 +58,10 @@ if __name__ == "__main__":
         fg = matplotlib.pyplot.figure()
 
         # Create axis ...
-        ax = pyguymer3.geo.add_axis(fg)
+        ax = pyguymer3.geo.add_axis(
+            fg,
+            gridlines_linecolor = "white",
+        )
 
         # Configure axis ...
         pyguymer3.geo.add_map_background(ax, name = "step1a", resolution = "step1a")
@@ -97,7 +100,10 @@ if __name__ == "__main__":
         fg = matplotlib.pyplot.figure()
 
         # Create axis ...
-        ax = pyguymer3.geo.add_axis(fg)
+        ax = pyguymer3.geo.add_axis(
+            fg,
+            gridlines_linecolor = "white",
+        )
 
         # Configure axis ...
         pyguymer3.geo.add_map_background(ax, name = "step2a", resolution = "step2a")
@@ -136,7 +142,10 @@ if __name__ == "__main__":
         fg = matplotlib.pyplot.figure()
 
         # Create axis ...
-        ax = pyguymer3.geo.add_axis(fg)
+        ax = pyguymer3.geo.add_axis(
+            fg,
+            gridlines_linecolor = "white",
+        )
 
         # Configure axis ...
         pyguymer3.geo.add_map_background(ax, name = "step2b", resolution = "step2b")
@@ -175,7 +184,10 @@ if __name__ == "__main__":
         fg = matplotlib.pyplot.figure()
 
         # Create axis ...
-        ax = pyguymer3.geo.add_axis(fg)
+        ax = pyguymer3.geo.add_axis(
+            fg,
+            gridlines_linecolor = "white",
+        )
 
         # Configure axis ...
         pyguymer3.geo.add_map_background(ax, name = "step2c", resolution = "step2c")
@@ -214,7 +226,10 @@ if __name__ == "__main__":
         fg = matplotlib.pyplot.figure()
 
         # Create axis ...
-        ax = pyguymer3.geo.add_axis(fg)
+        ax = pyguymer3.geo.add_axis(
+            fg,
+            gridlines_linecolor = "white",
+        )
 
         # Configure axis ...
         pyguymer3.geo.add_map_background(ax, name = "step3a", resolution = "step3a")
