@@ -60,7 +60,8 @@ if __name__ == "__main__":
         # Create axis ...
         ax = pyguymer3.geo.add_axis(
             fg,
-            gridlines_linecolor = "white",
+            coastlines_edgecolor = "white",
+             gridlines_linecolor = "white",
         )
 
         # Configure axis ...
@@ -75,9 +76,6 @@ if __name__ == "__main__":
 
         # Configure colour bar ...
         cb.set_label("Elevation [m]")
-
-        # Configure axis ...
-        pyguymer3.geo.add_coastlines(ax, colorName = "white")
 
         # Configure figure ...
         fg.tight_layout()
@@ -102,7 +100,8 @@ if __name__ == "__main__":
         # Create axis ...
         ax = pyguymer3.geo.add_axis(
             fg,
-            gridlines_linecolor = "white",
+            coastlines_edgecolor = "white",
+             gridlines_linecolor = "white",
         )
 
         # Configure axis ...
@@ -117,9 +116,6 @@ if __name__ == "__main__":
 
         # Configure colour bar ...
         cb.set_label("Time Until Sunrise After 12:00 UTC [hr]")
-
-        # Configure axis ...
-        pyguymer3.geo.add_coastlines(ax, colorName = "white")
 
         # Configure figure ...
         fg.tight_layout()
@@ -144,7 +140,8 @@ if __name__ == "__main__":
         # Create axis ...
         ax = pyguymer3.geo.add_axis(
             fg,
-            gridlines_linecolor = "white",
+            coastlines_edgecolor = "white",
+             gridlines_linecolor = "white",
         )
 
         # Configure axis ...
@@ -159,9 +156,6 @@ if __name__ == "__main__":
 
         # Configure colour bar ...
         cb.set_label("Time Until Noon After 12:00 UTC [hr]")
-
-        # Configure axis ...
-        pyguymer3.geo.add_coastlines(ax, colorName = "white")
 
         # Configure figure ...
         fg.tight_layout()
@@ -186,7 +180,8 @@ if __name__ == "__main__":
         # Create axis ...
         ax = pyguymer3.geo.add_axis(
             fg,
-            gridlines_linecolor = "white",
+            coastlines_edgecolor = "white",
+             gridlines_linecolor = "white",
         )
 
         # Configure axis ...
@@ -201,9 +196,6 @@ if __name__ == "__main__":
 
         # Configure colour bar ...
         cb.set_label("Time Until Sunset After 12:00 UTC [hr]")
-
-        # Configure axis ...
-        pyguymer3.geo.add_coastlines(ax, colorName = "white")
 
         # Configure figure ...
         fg.tight_layout()
@@ -228,7 +220,8 @@ if __name__ == "__main__":
         # Create axis ...
         ax = pyguymer3.geo.add_axis(
             fg,
-            gridlines_linecolor = "white",
+            coastlines_edgecolor = "white",
+             gridlines_linecolor = "white",
         )
 
         # Configure axis ...
@@ -243,9 +236,6 @@ if __name__ == "__main__":
 
         # Configure colour bar ...
         cb.set_label("Time Zone Difference From UTC [hr]")
-
-        # Configure axis ...
-        pyguymer3.geo.add_coastlines(ax, colorName = "white")
 
         # Configure figure ...
         fg.tight_layout()
@@ -282,9 +272,6 @@ if __name__ == "__main__":
 
         # Configure colour bar ...
         cb.set_label("Difference Between Noon & Time Zone [hr]")
-
-        # Configure axis ...
-        pyguymer3.geo.add_coastlines(ax)
 
         # Configure figure ...
         fg.tight_layout()
