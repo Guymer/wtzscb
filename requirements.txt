@@ -4,5 +4,6 @@
 cartopy
 ephem
 matplotlib
+meson
 numpy
 shapely
