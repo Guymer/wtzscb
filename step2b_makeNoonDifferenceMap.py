@@ -59,7 +59,7 @@ if __name__ == "__main__":
 
         # Define the reference time as chronological noon on 20-March-2019 and
         # initialize observer ...
-        ref = datetime.datetime(2019, 3, 20, 12, tzinfo = datetime.timezone.utc)
+        ref = datetime.datetime(2019, 3, 20, 12, tzinfo = datetime.UTC)
         obs = ephem.Observer()
         obs.date = ephem.Date(ref)
 
@@ -75,7 +75,7 @@ if __name__ == "__main__":
 
                 # Find the next time that the Sun will cross the meridian (as an
                 # 'aware' datetime object in UTC) ...
-                noon = obs.next_transit(ephem.Sun()).datetime().replace(tzinfo = datetime.timezone.utc)
+                noon = obs.next_transit(ephem.Sun()).datetime().replace(tzinfo = datetime.UTC)
 
                 # Find out the difference from the reference time ...
                 diff[iy, ix] = (noon - ref).total_seconds() / 3600.0            # [hr]

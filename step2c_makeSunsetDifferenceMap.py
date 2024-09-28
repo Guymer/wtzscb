@@ -59,7 +59,7 @@ if __name__ == "__main__":
 
         # Define the reference time as chronological noon on 20-March-2019 and
         # initialize observer ...
-        ref = datetime.datetime(2019, 3, 20, 12, tzinfo = datetime.timezone.utc)
+        ref = datetime.datetime(2019, 3, 20, 12, tzinfo = datetime.UTC)
         obs = ephem.Observer()
         obs.date = ephem.Date(ref)
 
@@ -76,7 +76,7 @@ if __name__ == "__main__":
                 # Find the next time that the Sun will set (as an 'aware'
                 # datetime object in UTC) ...
                 try:
-                    noon = obs.next_setting(ephem.Sun()).datetime().replace(tzinfo = datetime.timezone.utc)
+                    noon = obs.next_setting(ephem.Sun()).datetime().replace(tzinfo = datetime.UTC)
                 except ephem.AlwaysUpError:
                     diff[iy, ix] = -1.0                                         # [hr]
                     continue
