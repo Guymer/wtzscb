@@ -1,5 +1,7 @@
 # What Time Zone Should Countries Be? (WTZSCB)
 
+!["mypy" GitHub Action Status](https://github.com/Guymer/wtzscb/actions/workflows/mypy.yaml/badge.svg) !["pylint" GitHub Action Status](https://github.com/Guymer/wtzscb/actions/workflows/pylint.yaml/badge.svg)
+
 This repository contains a few Python scripts to answer the question "What Time Zone Should Countries Be?" in support of [a recent blog post](https://thomasguymer.co.uk/blog/2019/2019-07-06/) of mine.
 
 ## Maps
