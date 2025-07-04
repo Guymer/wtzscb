@@ -77,7 +77,7 @@ if __name__ == "__main__":
         print(f"Making \"{pfile}\" ...")
 
         # Create short-hand ...
-        cm = matplotlib.pyplot.get_cmap("seismic")
+        cm = matplotlib.colormaps["coolwarm"]
 
         # Make image ...
         img = numpy.zeros((lat.size, lon.size, 3), dtype = numpy.uint8)
@@ -98,5 +98,5 @@ if __name__ == "__main__":
                 img[iy, ix, 2] = 255.0 * b
 
         # Save PNG ...
-        pyguymer3.image.save_array_as_PNG(img, pfile, ftype_req = 0)
-        pyguymer3.image.optimize_image(pfile, strip = True)
+        pyguymer3.image.save_array_as_PNG(img, pfile)
+        pyguymer3.image.optimise_image(pfile, strip = True)

@@ -68,7 +68,7 @@ if __name__ == "__main__":
         pyguymer3.geo.add_map_background(ax, name = "step1a", resolution = "step1a")
 
         # Add (fake) foreground images ...
-        im = ax.imshow(numpy.array([[0.0, 6000.0]]), cmap = "jet")
+        im = ax.imshow(numpy.array([[0.0, 6000.0]]), cmap = "turbo")
         im.set_visible(False)
 
         # Add colour bar ...
@@ -85,7 +85,7 @@ if __name__ == "__main__":
         matplotlib.pyplot.close(fg)
 
         # Optimize PNG ...
-        pyguymer3.image.optimize_image(pfile, strip = True)
+        pyguymer3.image.optimise_image(pfile, strip = True)
 
     # **************************************************************************
 
@@ -108,7 +108,7 @@ if __name__ == "__main__":
         pyguymer3.geo.add_map_background(ax, name = "step2a", resolution = "step2a")
 
         # Add (fake) foreground images ...
-        im = ax.imshow(numpy.array([[0.0, 24.0]]), cmap = "jet")
+        im = ax.imshow(numpy.array([[0.0, 24.0]]), cmap = "turbo")
         im.set_visible(False)
 
         # Add colour bar ...
@@ -125,7 +125,7 @@ if __name__ == "__main__":
         matplotlib.pyplot.close(fg)
 
         # Optimize PNG ...
-        pyguymer3.image.optimize_image(pfile, strip = True)
+        pyguymer3.image.optimise_image(pfile, strip = True)
 
     # **************************************************************************
 
@@ -148,7 +148,7 @@ if __name__ == "__main__":
         pyguymer3.geo.add_map_background(ax, name = "step2b", resolution = "step2b")
 
         # Add (fake) foreground images ...
-        im = ax.imshow(numpy.array([[0.0, 24.0]]), cmap = "jet")
+        im = ax.imshow(numpy.array([[0.0, 24.0]]), cmap = "turbo")
         im.set_visible(False)
 
         # Add colour bar ...
@@ -165,7 +165,7 @@ if __name__ == "__main__":
         matplotlib.pyplot.close(fg)
 
         # Optimize PNG ...
-        pyguymer3.image.optimize_image(pfile, strip = True)
+        pyguymer3.image.optimise_image(pfile, strip = True)
 
     # **************************************************************************
 
@@ -188,7 +188,7 @@ if __name__ == "__main__":
         pyguymer3.geo.add_map_background(ax, name = "step2c", resolution = "step2c")
 
         # Add (fake) foreground images ...
-        im = ax.imshow(numpy.array([[0.0, 24.0]]), cmap = "jet")
+        im = ax.imshow(numpy.array([[0.0, 24.0]]), cmap = "turbo")
         im.set_visible(False)
 
         # Add colour bar ...
@@ -205,7 +205,7 @@ if __name__ == "__main__":
         matplotlib.pyplot.close(fg)
 
         # Optimize PNG ...
-        pyguymer3.image.optimize_image(pfile, strip = True)
+        pyguymer3.image.optimise_image(pfile, strip = True)
 
     # **************************************************************************
 
@@ -228,7 +228,7 @@ if __name__ == "__main__":
         pyguymer3.geo.add_map_background(ax, name = "step3a", resolution = "step3a")
 
         # Add (fake) foreground images ...
-        im = ax.imshow(numpy.array([[0.0, 24.0]]), cmap = "jet")
+        im = ax.imshow(numpy.array([[0.0, 24.0]]), cmap = "turbo")
         im.set_visible(False)
 
         # Add colour bar ...
@@ -245,7 +245,7 @@ if __name__ == "__main__":
         matplotlib.pyplot.close(fg)
 
         # Optimize PNG ...
-        pyguymer3.image.optimize_image(pfile, strip = True)
+        pyguymer3.image.optimise_image(pfile, strip = True)
 
     # **************************************************************************
 
@@ -264,7 +264,7 @@ if __name__ == "__main__":
         pyguymer3.geo.add_map_background(ax, name = "step4a", resolution = "step4a")
 
         # Add (fake) foreground images ...
-        im = ax.imshow(numpy.array([[-3.0, 3.0]]), cmap = "seismic")
+        im = ax.imshow(numpy.array([[-3.0, 3.0]]), cmap = "coolwarm")
         im.set_visible(False)
 
         # Add colour bar ...
@@ -281,4 +281,4 @@ if __name__ == "__main__":
         matplotlib.pyplot.close(fg)
 
         # Optimize PNG ...
-        pyguymer3.image.optimize_image(pfile, strip = True)
+        pyguymer3.image.optimise_image(pfile, strip = True)
