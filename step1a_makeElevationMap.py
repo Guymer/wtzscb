@@ -4,24 +4,13 @@
 # NOTE: See https://docs.python.org/3.12/library/multiprocessing.html#the-spawn-and-forkserver-start-methods
 if __name__ == "__main__":
     # Import standard modules ...
+    import argparse
+    import json
     import math
     import os
     import zipfile
 
     # Import special modules ...
-    try:
-        import matplotlib
-        matplotlib.rcParams.update(
-            {
-                       "backend" : "Agg",                                       # NOTE: See https://matplotlib.org/stable/gallery/user_interfaces/canvasagg.html
-                    "figure.dpi" : 300,
-                "figure.figsize" : (9.6, 7.2),                                  # NOTE: See https://github.com/Guymer/misc/blob/main/README.md#matplotlib-figure-sizes
-                     "font.size" : 8,
-            }
-        )
-        import matplotlib.pyplot
-    except:
-        raise Exception("\"matplotlib\" is not installed; run \"pip install --user matplotlib\"") from None
     try:
         import numpy
     except:
@@ -33,6 +22,28 @@ if __name__ == "__main__":
         import pyguymer3.image
     except:
         raise Exception("\"pyguymer3\" is not installed; run \"pip install --user PyGuymer3\"") from None
+
+    # **************************************************************************
+
+    # Create argument parser and parse the arguments ...
+    parser = argparse.ArgumentParser(
+           allow_abbrev = False,
+            description = "Make a map of elevation.",
+        formatter_class = argparse.ArgumentDefaultsHelpFormatter,
+    )
+    parser.add_argument(
+        "--debug",
+        action = "store_true",
+          help = "print debug messages",
+    )
+    args = parser.parse_args()
+
+    # **************************************************************************
+
+    # Load colour tables and create short-hand ...
+    with open(f"{pyguymer3.__path__[0]}/data/json/colourTables.json", "rt", encoding = "utf-8") as fObj:
+        colourTables = json.load(fObj)
+    turbo = numpy.array(colourTables["turbo"]).astype(numpy.uint8)
 
     # **************************************************************************
 
@@ -145,27 +156,45 @@ if __name__ == "__main__":
     if not os.path.exists(pfile):
         print(f"Making \"{pfile}\" ...")
 
-        # Create short-hand ...
-        cm = matplotlib.colormaps["turbo"]
-
         # Make image ...
-        img = numpy.zeros((lat.size, lon.size, 3), dtype = numpy.uint8)
+        img = numpy.zeros(
+            (lat.size, lon.size, 1),
+            dtype = numpy.uint8,
+        )
 
         # Loop over y-axis ...
         for iy in range(lat.size):
             # Loop over x-axis ...
             for ix in range(lon.size):
-                # Find normalized value ...
-                val = min(1.0, max(0.0, scElev[iy, ix] / 6000.0))
-
-                # Determine colours ...
-                r, g, b, a = cm(val)
-
                 # Set pixel ...
-                img[iy, ix, 0] = 255.0 * r
-                img[iy, ix, 1] = 255.0 * g
-                img[iy, ix, 2] = 255.0 * b
+                img[iy, ix, 0] = numpy.uint8(
+                    min(
+                        255.0,
+                        max(
+                            0.0,
+                            255.0 * scElev[iy, ix] / 6000.0,
+                        ),
+                    )
+                )
 
         # Save PNG ...
-        pyguymer3.image.save_array_as_PNG(img, pfile)
-        pyguymer3.image.optimise_image(pfile, strip = True)
+        src = pyguymer3.image.makePng(
+            img,
+            calcAdaptive = True,
+             calcAverage = True,
+                calcNone = True,
+               calcPaeth = True,
+                 calcSub = True,
+                  calcUp = True,
+                 choices = "all",
+                   debug = args.debug,
+                     dpi = None,
+                  levels = [9,],
+               memLevels = [9,],
+                 modTime = None,
+                palUint8 = turbo,
+              strategies = None,
+                  wbitss = [15,],
+        )
+        with open(pfile, "wb") as fObj:
+            fObj.write(src)
