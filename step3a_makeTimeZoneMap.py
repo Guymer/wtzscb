@@ -87,7 +87,7 @@ if __name__ == "__main__":
         # Find file containing all the country shapes ...
         sfile = cartopy.io.shapereader.natural_earth(
               category = "cultural",
-                  name = "time_zones"
+                  name = "time_zones",
             resolution = "10m",
         )
 
