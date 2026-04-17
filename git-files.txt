@@ -10,6 +10,7 @@ checkCities.py
 elev.png
 funcs/__init__.py
 funcs/horizon.py
+git-files.txt
 images.json
 LICENCE.txt
 makePlots.py
