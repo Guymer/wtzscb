@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # Use the proper idiom in the main module ...
-# NOTE: See https://docs.python.org/3.12/library/multiprocessing.html#the-spawn-and-forkserver-start-methods
+# NOTE: See https://docs.python.org/3.13/library/multiprocessing.html#the-spawn-and-forkserver-start-methods
 if __name__ == "__main__":
     # Import standard modules ...
     import argparse
@@ -39,7 +39,7 @@ if __name__ == "__main__":
     # **************************************************************************
 
     # Load colour tables and create short-hand ...
-    with open(f"{pyguymer3.__path__[0]}/data/json/colourTables.json", "rt", encoding = "utf-8") as fObj:
+    with open(f"{pyguymer3.__path__[0]}/data/json/colourTables.json", mode = "rt", encoding = "utf-8") as fObj:
         colourTables = json.load(fObj)
     coolwarm = numpy.array(colourTables["coolwarm"]).astype(numpy.uint8)
 
@@ -127,5 +127,5 @@ if __name__ == "__main__":
               strategies = None,
                   wbitss = [15,],
         )
-        with open(pfile, "wb") as fObj:
+        with open(pfile, mode = "wb") as fObj:
             fObj.write(src)
